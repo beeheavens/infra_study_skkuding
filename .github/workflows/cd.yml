@@ -1,4 +1,4 @@
-name : Skkuding study week8 continuous deployment
+name : Skkuding study week8 CD 
 
 on:
   push:
