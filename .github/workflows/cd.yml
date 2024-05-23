@@ -18,7 +18,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::652258230505:oidc-provider/token.actions.githubusercontent.com
+          role-to-assume: arn:aws:iam::652258230505:role/skkuding_identity
           aws-region: ap-northeast-2
       - name: Upload static files
         run: aws s3 sync static_files s3://skkuding --region ap-northeast-2
