@@ -37,12 +37,12 @@ jobs:
          role-to-assume: arn:aws:iam::652258230505:role/skkuding_identity
          aws-region: ap-northeast-2
      - name: Log in
-         id: login-ecr
-         uses: aws-actions/amazon-ecr-login@v2
-         env:
-           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-           ECR_REPOSITORY: skkuding_3
-         with:
-           file: 3.Docker/Dockerfile
-           push: true
-           tags: ${{ steps.login-ecr.outputs.registry }}/skkuding_3:latest
+       id: login-ecr
+       uses: aws-actions/amazon-ecr-login@v2
+       env:
+         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+         ECR_REPOSITORY: skkuding_3
+       with:
+         file: 3.Docker/Dockerfile
+         push: true
+         tags: ${{ steps.login-ecr.outputs.registry }}/skkuding_3:latest
